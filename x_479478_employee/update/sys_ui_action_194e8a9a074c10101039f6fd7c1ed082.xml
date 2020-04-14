@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Request Leave</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments>Employee should be able to apply leave, this is an UI Action on form.&#13;
+When employee requests for a leave (Request Leave – UI Action) a leave record will be created in 'leaves' table with 'state' set to 'requested'. ???&#13;
+</comments>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Request Leave</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[(function executeRule(current /*null when async*/) {
+	
+	
+
+	// Add your code here
+	// 1. Create an object to store rows from a table
+	var employees = new GlideRecord('x_479478_employee_employee');
+	
+	// 2. Build query
+	employees.addQuery('u_name','=', current.u_name);
+
+	// 3. Execute query 
+	employees.query();
+	
+	// 4. Process returned records
+	if(employees.next()){
+		//Logic you want to execute. 
+		var leaves = new GlideRecord("x_479478_employee_leaves");
+		
+		//var currentUser = gs.getUser(); 
+		
+		leaves.initialize();
+		leaves.u_state = 'Requested';
+		leaves.u_requested_by_ref = current.sys_id;
+		leaves.u_assigned_to_ref = current.u_reference_8;
+		
+
+		leaves.insert();
+		
+		var managerEmail = current.u_reference_8.email;
+		gs.info("Email has been sent to:" + managerEmail);
+
+	}
+
+})(current);]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-10 17:29:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>194e8a9a074c10101039f6fd7c1ed082</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Request Leave</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Employee" source="x_479478_employee">600534b107cc10101039f6fd7c1ed00d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee">600534b107cc10101039f6fd7c1ed00d</sys_scope>
+        <sys_update_name>sys_ui_action_194e8a9a074c10101039f6fd7c1ed082</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-13 17:07:43</sys_updated_on>
+        <table>x_479478_employee_employee</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

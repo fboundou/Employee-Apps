@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Employee" max_length="40" name="x_479478_employee_employee" sizeclass="2" type="collection">
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Age" mandatory="true" max_length="40" name="u_age" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Bonus" mandatory="true" max_length="40" name="u_bonus" type="string"/>
+        <element label="Bonus" max_length="15" name="u_bonus_manager" read_only="true" type="decimal"/>
+        <element label="Salary" mandatory="true" max_length="15" name="u_decimal_6" type="decimal"/>
+        <element label="Age" mandatory="true" max_length="40" name="u_integer_3" type="integer"/>
+        <element label="Leave Taken" max_length="40" name="u_leave_taken" read_only="true" type="integer"/>
+        <element label="Is manager" max_length="40" name="u_manager" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" mandatory="true" max_length="40" name="u_name" type="string"/>
+        <element attributes="encode_utf8=false" label="Manager" mandatory="true" max_length="32" name="u_reference_8" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Request Leave" max_length="40" name="u_request_leave" type="string"/>
+        <element label="Salary" mandatory="true" max_length="15" name="u_salary" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Bonus" mandatory="true" max_length="40" name="u_string_5" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_assigned_to_ref" label="Assigned To" language="en" table="x_479478_employee_leaves">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_assigned_to_ref</element>
+            <help/>
+            <hint/>
+            <label>Assigned To</label>
+            <language>en</language>
+            <name>x_479478_employee_leaves</name>
+            <plural>Assigned Tos</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-04-10 16:59:22</sys_created_on>
+            <sys_id>9f1a4ed6074c10101039f6fd7c1ed0f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Assigned To</sys_name>
+            <sys_package display_value="Employee" source="x_479478_employee">600534b107cc10101039f6fd7c1ed00d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Employee">600534b107cc10101039f6fd7c1ed00d</sys_scope>
+            <sys_update_name>sys_documentation_x_479478_employee_leaves_u_assigned_to_ref_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-04-10 16:59:22</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

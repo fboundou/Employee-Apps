@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_479478_employee_employee">x_479478_employee_employee</category>
+        <maximum_digits>6</maximum_digits>
+        <number>1000</number>
+        <prefix>EMP</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-08 21:39:18</sys_created_on>
+        <sys_id>dc073cb507cc10101039f6fd7c1ed0d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EMP</sys_name>
+        <sys_package display_value="Employee" source="x_479478_employee">600534b107cc10101039f6fd7c1ed00d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee">600534b107cc10101039f6fd7c1ed00d</sys_scope>
+        <sys_update_name>sys_number_dc073cb507cc10101039f6fd7c1ed0d4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-08 21:39:18</sys_updated_on>
+    </sys_number>
+</record_update>
